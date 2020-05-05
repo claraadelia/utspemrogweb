@@ -1,0 +1,25 @@
+{
+  "name": "utspemrogweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claraadelia/utspemrogweb.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "node",
+    "js"
+  ],
+  "author": "clara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claraadelia/utspemrogweb/issues"
+  },
+  "homepage": "https://github.com/claraadelia/utspemrogweb#readme"
+}
