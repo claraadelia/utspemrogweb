@@ -36,5 +36,31 @@ exports.tampilberdasarkanid = function(req, res){
   };
 
 
+// menampilkan data montir secara keseluruhan
+exports.tampilsemuamontir = function(req, res){
+    connection.query('SELECT * FROM t_montir', function(error, rows, fileds){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok(rows, res)
+        }
 
-    
+            }
+            )};
+
+// menampilkan data montir berdasarkan id nya
+exports.tampilberdasarkanidmontir = function(req, res){
+    let id = req.params.id;
+    connection.query ('SELECT * FROM t_montir WHERE id_montir = ?', [id], 
+    function(error, rows, fileds){
+        if(error){
+            console.log(error);
+        }else{
+                response.ok(rows, res);
+        }
+    }
+
+  );
+  };
+
+  
