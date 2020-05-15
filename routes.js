@@ -9,7 +9,7 @@ module.exports = function (app) {
     .get(jsonku.tampilsemuauser);
 
     app.route('/tampil/:id')
-        .get(jsonku.tampilsemuaid);
+        .get(jsonku.tampilberdasarkanid);
 
     
 }   

@@ -15,15 +15,25 @@ exports.tampilsemuauser = function(req, res){
         }else{
             response.ok(rows, res)
         }
-        exports.tampilsemuaid = function(req, res){
-            connection.query('SELECT * FROM t_user WHERE id = ?', [id], function(error, rows, fileds){
-                if(error){
-                    connection.log(error);
-                } else
-                response.ok(rows, res)
+
             }
-            )}
-    });
-};
+            )};
+
+//menampilkan data user berdasarkan id nya
+
+exports.tampilberdasarkanid = function(req, res){
+    let id = req.params.id;
+    connection.query ('SELECT * FROM t_user WHERE id = ?', [id], 
+    function(error, rows, fileds){
+        if(error){
+            console.log(error);
+        }else{
+                response.ok(rows, res);
+        }
+    }
+
+  );
+  };
 
 
+    
