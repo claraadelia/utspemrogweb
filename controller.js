@@ -63,4 +63,24 @@ exports.tampilberdasarkanidmontir = function(req, res){
   );
   };
 
-  
+  //menambahkan data table service
+  exports.tambahservis = function(req, res){
+      var id_servis = req.body.id_servis;
+      var tgl_servis = req.body.tgl_servis;
+      var id_user = req.body.id_user;
+      var id_montir = req.body.id_montir;
+      var id_sparepat = req.body.id_sparepat;
+      var jumlah_sparepat =  req.body.jumlah_sparepat;
+
+      connection.query('INSERT INTO t_servis (id_servis, tgl_servis,id_user,id_montir,id_sparepat,jumlah_sparepat) VALUES (?,?,?,?,?)' , 
+      [id_servis, tgl_servis,id_user,id_montir,id_sparepat,jumlah_sparepat],
+        function(error, rows,fileds){
+
+            if (error) {
+                console.log(error);
+            }else{
+                response.ok("berhasil menambahkan data", res)
+            }
+
+        }
+      )};
