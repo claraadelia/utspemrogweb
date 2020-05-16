@@ -72,7 +72,7 @@ exports.tampilberdasarkanidmontir = function(req, res){
       var id_sparepat = req.body.id_sparepat;
       var jumlah_sparepat =  req.body.jumlah_sparepat;
 
-      connection.query('INSERT INTO t_servis (id_servis, tgl_servis,id_user,id_montir,id_sparepat,jumlah_sparepat) VALUES (?,?,?,?,?)' , 
+      connection.query('INSERT INTO t_servis (id_servis, tgl_servis,id_user,id_montir,id_sparepat,jumlah_sparepat) VALUES (?,?,?,?,?,?)' , 
       [id_servis, tgl_servis,id_user,id_montir,id_sparepat,jumlah_sparepat],
         function(error, rows,fileds){
 
