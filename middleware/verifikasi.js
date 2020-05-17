@@ -11,21 +11,22 @@ var level = req.body.level;
         if(tokenWithBearer) {
             var token = tokenWithBearer.split(' ')[1];
 
+
             //verifikasi
             jwt.verify(token, config.secret, function(err, decoded){
                 if(err){
-                    return rest.status(401).send({auth:false, message:'Token tidak terdaftar!'});
+                    return rest.status(401).send({auth:false, message:'token tidak terdaftar!'});
                 }else {
                     if(role == 2){
                         req.auth = decoded;
                         next();
                     }else {
-                        return rest.status(401).send({auth:false, message:'Gagal mengotorisasi level anda!'});
+                        return rest.status(401).send({auth:false, message:'gagal mengotorisasi level anda'});
                     }
                 }
             });
         }else {
-            return rest.status(401).send({auth:false, message:'Token tidak tersedia!'});
+            return rest.status(401).send({auth:false, message:'token tidak tersedia'});
         }
     }
 }module.exports = verifikasi; 
