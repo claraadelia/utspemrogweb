@@ -26,7 +26,7 @@ exports.registrasi = function(req, res){
     query = mysql.format(query,table);
 
     connection.query(query, function(error, rows){
-        if (error(){
+        if (error) {
             console.log(error);
         }else{
             if(rows.length == 0){
@@ -42,8 +42,8 @@ exports.registrasi = function(req, res){
                 });
             }else{
                 response.ok("email sudah terdaftar!");
-                
+
             }
         }
     }
-        )}
+        )};
